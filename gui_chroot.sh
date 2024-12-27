@@ -1,0 +1,1 @@
+pacman -S --noconfirm code xorg-server lightdm lxde notepadqq 
