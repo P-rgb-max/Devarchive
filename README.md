@@ -56,9 +56,14 @@ shutdown -h now
 
 #### LightDM setup
 
-I don't know your case, but for me lightdm didn't work right from the start, so either use `sddm` instead (edit gui_chroot.sh:53) or run the setup script with the next commands:
+I don't know your case, but for me `lightdm` didn't work right from the start, so either use `sddm` instead (edit gui_chroot.sh:53) or run the setup script with the next commands:
 ```bash
 curl https://raw.githubusercontent.com/P-rgb-max/Devarchive/refs/heads/main/misc/cli.sh | bash
 ```
 
 The second way is recommended.
+
+## Contributors
+
+I'm not lying, but this project was contributed by no one, but me. Maybe really it isn't so impressive as I think to say so, but I hope you like it.
+And maybe even contribute by [buying me a pizza](https://buymeacoffee.com/tockdev) 🥰!
