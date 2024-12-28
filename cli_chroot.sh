@@ -8,7 +8,7 @@ echo Usage: `basename $0` <key>
 echo    key - a key provided in the end of the \`cli.sh\` installer script.
 exit 1
 fi
-disk=$1
+disk=$(echo $1|base64 -d)
 
 echo Choose your region. Type in Region/City, eg. Asia/Dubai. \>
 read _none

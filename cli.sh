@@ -86,6 +86,7 @@ echo Installed the base OS
 genfstab /mnt\>/mnt/etc/fstab
 echo Created the fstab file at /etc folder on the target system
 
+key=$(echo $disk|base64)
 echo After this step, follow the \"Chrooted system\" \(CLI mode\) step in the README.md guide
-echo Also, provide this key as parameter the cli_chroot.sh: \"${disk}\" \(without quotes)
+echo Also, provide this key as parameter the cli_chroot.sh: \"${key}\" \(without quotes)
 arch-chroot /mnt
