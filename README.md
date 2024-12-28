@@ -24,10 +24,13 @@ curl <raw cli_chroot.sh url> | bash
 ```
 
 #### Cleaning up
-You're in the colorful (zsh) prompt again. Type this, and take out the installation media once pc is off. Then feel free to boot into your new system!
+You're in the colorful (zsh) prompt again. Type this, and take out the installation media once your PC is off. Then feel free to boot into your new system!
 ```bash
+umount -a
 shutdown -h now
 ```
+
+**PS.** Once in the new system, run `nmtui` to setup _WiFi connection_. And if you want to double the font, run `setfont -d` (font was doubled along all the installation process).
 
 ## GUI mode
 
@@ -46,7 +49,6 @@ curl <raw gui_chroot.sh url> | bash
 #### Cleaning up
 You're in the colorful (zsh) prompt again. Type this, and take out the installation media once pc is off. Then feel free to boot into your new system!
 ```bash
-cd ~
 umount -a
 shutdown -h now
 ```
