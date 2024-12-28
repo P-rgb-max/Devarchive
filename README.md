@@ -12,8 +12,6 @@ To get started, you better choose do you want to work in TTY mode or with LXDE g
 #### Live environment
 To get started, run this command in the live environment of the Archiso:
 ```bash
-cd ~
-umount -a
 curl <raw cli.sh url> | bash
 ```
 
@@ -24,8 +22,9 @@ curl <raw cli_chroot.sh url> | bash
 ```
 
 #### Cleaning up
-You're in the colorful (zsh) prompt again. Type this, and take out the installation media once your PC is off. Then feel free to boot into your new system!
+Run these commands, and take out the installation media once your PC is off. Then feel free to boot into your new system!
 ```bash
+exit
 umount -a
 shutdown -h now
 ```
@@ -47,9 +46,10 @@ curl <raw gui_chroot.sh url> | bash
 ```
 
 #### Cleaning up
-**WARNING:** If you left the default `lightdm` display manager, follow its [setup](#lightdm)
+**WARNING:** If you left the default `lightdm` display manager, follow its setup in the misc section of this file before running any commands in this section.
 You're in the colorful (zsh) prompt again. Type this, and take out the installation media once pc is off. Then feel free to boot into your new system!
 ```bash
+exit
 umount -a
 shutdown -h now
 ```
