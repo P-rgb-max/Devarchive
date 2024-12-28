@@ -4,21 +4,18 @@ Hello, this is my little guide to installing Arch-linux using my simple scripts 
 
 To get started, you better choose do you want to work in TTY mode or with LXDE graphical environment.
 
- - [CLI mode](#cli)
- - [GUI mode](#gui)
-
 ## CLI Mode
 
 #### Live environment
 To get started, run this command in the live environment of the Archiso:
 ```bash
-curl <raw cli.sh url> | bash
+curl https://raw.githubusercontent.com/P-rgb-max/Devarchive/refs/heads/main/cli.sh | bash
 ```
 
 #### Chrooted system
 Then, once asked, run the following lines:
 ```bash
-curl <raw cli_chroot.sh url> | bash
+curl https://raw.githubusercontent.com/P-rgb-max/Devarchive/refs/heads/main/cli_chroot.sh | bash
 ```
 
 #### Cleaning up
@@ -36,13 +33,13 @@ shutdown -h now
 #### Live environment
 To get started, run this command in the live environment of the Archiso:
 ```bash
-curl <raw gui.sh url> | bash
+curl https://raw.githubusercontent.com/P-rgb-max/Devarchive/refs/heads/main/gui.sh | bash
 ```
 
 #### Chrooted system
 Then, once asked, run the following lines:
 ```bash
-curl <raw gui_chroot.sh url> | bash
+curl https://raw.githubusercontent.com/P-rgb-max/Devarchive/refs/heads/main/gui_chroot.sh | bash
 ```
 
 #### Cleaning up
@@ -61,7 +58,7 @@ shutdown -h now
 
 I don't know your case, but for me lightdm didn't work right from the start, so either use `sddm` instead (edit gui_chroot.sh:53) or run the setup script with the next commands:
 ```bash
-curl <raw lightdm.sh url> | bash
+curl https://raw.githubusercontent.com/P-rgb-max/Devarchive/refs/heads/main/misc/cli.sh | bash
 ```
 
 The second way is recommended.
