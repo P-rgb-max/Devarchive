@@ -33,12 +33,12 @@ echo Right now, enter new root password when prompted \(it will become root pass
 passwd
 
 echo Now, choose a name for your user. \>
-read _none
-useradd -mGwheel -s/bin/bash $_none
+read user
+useradd -mGwheel -s/bin/bash $user
 echo Right now, enter a password for your user once asked
-passwd $_none
+passwd $user
 
-echo Do you want your user \"$_none\" to run \`sudo\` command without asking for password? \[Y\]es, \[N\]o \>
+echo Do you want your user \"$user\" to run \`sudo\` command without asking for password? \[Y\]es, \[N\]o \>
 read _none
 if [[ $_none -eq y ]];then
 echo %wheel ALL=(ALL) NOPASSWD: ALL>>/etc/sudoers
@@ -65,6 +65,11 @@ grub-install $disk
 echo GRUB should now be successfully installed. Configurating now...
 grub-mkconfig -o /boot/grub/grub.cfg
 echo
+
+if [[ $dispman -eq lightdm ]];then
+key=$(echo $user|base64)
+echo Provide this key to the script \`lightdm.sh\` if you want to setup autologin for your user: $key
+fi
 
 echo Now, once in the live environment again, follow the \"Cleaning up\" \(CLI mode\) step in the README.md guide
 exit

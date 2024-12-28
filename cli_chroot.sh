@@ -48,7 +48,7 @@ fi
 
 # ! Feel free to edit this row. This will change which packages will be installed to the final system
 echo This step will install basic developer tools. Feel free to edit row 44 in this script to change the list of installed packages.
-pacman -S emacs vim zsh
+pacman -S emacs vim zsh --noconfirm
 
 systemctl enable NetworkManager
 echo NetworkManager enabled. To connect WiFi, use \`nmtui\` once booted into the new system.
