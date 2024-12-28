@@ -47,7 +47,8 @@ curl <raw gui_chroot.sh url> | bash
 
 #### Cleaning up
 **WARNING:** If you left the default `lightdm` display manager, follow its setup in the misc section of this file before running any commands in this section.
-You're in the colorful (zsh) prompt again. Type this, and take out the installation media once pc is off. Then feel free to boot into your new system!
+
+Run this commands, and take out the installation media once your PC is off. Then feel free to boot into your new system!
 ```bash
 exit
 umount -a
@@ -58,4 +59,9 @@ shutdown -h now
 
 #### LightDM setup
 
-I don't know your case, but for me lightdm didn't work right from the start, so either use `sddm` instead (edit gui_chroot.sh:53) or run the setup script at `misc/lightdm.sh` (recommended).
+I don't know your case, but for me lightdm didn't work right from the start, so either use `sddm` instead (edit gui_chroot.sh:53) or run the setup script with the next commands:
+```bash
+curl <raw lightdm.sh url> | bash
+```
+
+The second way is recommended.
