@@ -50,7 +50,7 @@ fi
 echo This step will install basic developer tools and graphical environment. Edit row 53 of this script to change minimal packages, and variables \`deskenv\` and \`dispman\` \(rows 51 \& 52\) to change desktop environment and display manager.
 deskenv=lxde
 dispman=lightdm # If this is `lightdm`, follow the "LightDM setup" (Miscellaneous) in the README.md
-pacman -S xterm zsh vim emacs code --noconfirm
+pacman -S xterm zsh vim emacs code chromium xterm --noconfirm
 pacman -S $deskenv $dispman --noconfirm
 
 systemctl enable NetworkManager
